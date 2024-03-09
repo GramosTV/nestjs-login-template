@@ -3,6 +3,7 @@ import { SetMetadata } from '@nestjs/common';
 export const jwtConstants = {
     secret: 'secretinenv',
     refreshTokenSecret: 'secretinenv123',
+    passwordChangeSecret: '12425123151234'
 };
 
 

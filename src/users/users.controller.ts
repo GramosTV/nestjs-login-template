@@ -1,4 +1,4 @@
-import { Controller } from '@nestjs/common';
+import { Controller, Post } from '@nestjs/common';
 import { UsersService } from './users.service';
 import {
     Get,
@@ -6,10 +6,10 @@ import {
   } from '@nestjs/common';
 @Controller('users')
 export class UsersController {
-    constructor(private authService: UsersService) {}
+    constructor(private usersService: UsersService) {}
 
-    @Get('test')
-    getProfile(@Request() req) {
-      return 'ok'
+    @Post('')
+    async createUser(@Request() req) {
+      return await this.usersService.createUser()
     }
 }
